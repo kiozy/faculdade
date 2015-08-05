@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 05-Ago-2015 às 16:33
+-- Generation Time: 05-Ago-2015 às 17:07
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `aluno` (
   `cod_aluno` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `cod_turma` int(11) unsigned NOT NULL,
+  `cod_turma` int(11) unsigned DEFAULT NULL,
   `cod_usuario` int(11) unsigned NOT NULL,
   `matricula_aluno` int(11) NOT NULL,
   `nome_aluno` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
@@ -38,7 +38,14 @@ CREATE TABLE IF NOT EXISTS `aluno` (
   UNIQUE KEY `matricula_aluno` (`matricula_aluno`),
   KEY `cod_turma_aluno_fk_idx` (`cod_turma`),
   KEY `cod_usuario_aluno_fk_idx` (`cod_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Extraindo dados da tabela `aluno`
+--
+
+INSERT INTO `aluno` (`cod_aluno`, `cod_turma`, `cod_usuario`, `matricula_aluno`, `nome_aluno`, `cpf`) VALUES
+(4, NULL, 13, 1213213, '23423', '123434567');
 
 -- --------------------------------------------------------
 
@@ -68,7 +75,16 @@ CREATE TABLE IF NOT EXISTS `endereco` (
   `bairro` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_endereco`),
   KEY `cod_usuario` (`cod_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+
+--
+-- Extraindo dados da tabela `endereco`
+--
+
+INSERT INTO `endereco` (`cod_endereco`, `cod_usuario`, `endereco`, `numero`, `bairro`) VALUES
+(1, 11, '121', '121', '121'),
+(2, 12, '121', '121', '121'),
+(3, 13, '121', '121', '121');
 
 -- --------------------------------------------------------
 
@@ -163,14 +179,18 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `tipo` varchar(4) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`cod_usuario`),
   UNIQUE KEY `login` (`login`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
 INSERT INTO `usuario` (`cod_usuario`, `login`, `senha`, `tipo`) VALUES
-(1, 'a', '$1$zn2.Af0.$oouC', 'alun');
+(5, 'batata', '$1$Mx1.lW5.$YrFp', 'alun'),
+(9, 'bat', '$1$k30.dn..$gVOG', 'alun'),
+(11, '121', '$1$Br2.0O2.$7TCf', 'alun'),
+(12, '1wqe1', '$1$H43.EL1.$KBu5', 'alun'),
+(13, '1w324qe1', '$1$UF/.No/.$cj8D', 'alun');
 
 --
 -- Constraints for dumped tables
