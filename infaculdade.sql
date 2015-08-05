@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 04-Ago-2015 às 16:33
+-- Generation Time: 05-Ago-2015 às 16:33
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `notafalta` (
   PRIMARY KEY (`cod_nf`),
   UNIQUE KEY `cod_aluno` (`cod_aluno`,`cod_disciplina`),
   KEY `nf_coddisc_fk` (`cod_disciplina`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -163,7 +163,14 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `tipo` varchar(4) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`cod_usuario`),
   UNIQUE KEY `login` (`login`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`cod_usuario`, `login`, `senha`, `tipo`) VALUES
+(1, 'a', '$1$zn2.Af0.$oouC', 'alun');
 
 --
 -- Constraints for dumped tables
