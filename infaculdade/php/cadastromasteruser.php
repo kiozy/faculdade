@@ -41,13 +41,13 @@
 						echo("$cod_usuario");
 						
 						if ($tipo == "aluno") {  //Insere outros dados na tabela aluno
-							$sql = "insert into aluno (cod_usuario, cpf, matricula_aluno, nome_aluno) values ($cod_usuario, $cpf, $matricula, $nome)";
+							$sql = "insert into aluno (cod_usuario, cpf, matricula_aluno, nome_aluno) values ('$cod_usuario', '$cpf', '$matricula', '$nome')";
 							echo("Add em aluno...");
 						}
 						else 
-							$sql = "insert into professor (cod_usuario, cpf, matricula_aluno, nome_professor) values ($cod_usuario, $cpf, $matricula, $nome)";
+							$sql = "insert into professor (cod_usuario, cpf, matricula_prof, nome_prof) values ('$cod_usuario', '$cpf', '$matricula', '$nome')";
 					
-						$sql2 = "insert into endereco (cod_usuario, endereco, numero, bairro) values ($query, $endereco, $numero, $bairro)";
+						$sql2 = "insert into endereco (cod_usuario, endereco, numero, bairro) values ('$query', '$endereco', '$numero', '$bairro')";
 						
 						$stmt = $link->prepare($sql);
 						echo "$sql<br><br>";
