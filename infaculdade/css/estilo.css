@@ -55,7 +55,7 @@ body{
 	box-shadow: 1px 1px 5px #888888;
 }
 #sidebar-wrapper:hover{
-	
+	background-color: #0166cc;
 
 }
 #legenda-login{
@@ -86,3 +86,16 @@ body{
     background-color: #fff;
     border-color: #ccc;
 }
+.sidebar-nav li a {
+	color:#000000;}
+	
+.sidebar-nav li a:hover {
+	color:#000000;}
+	
+#sidebar-wrapper:hover {
+    background-color: #4d93db;
+}
+
+	.logo{
+	width:250px;
+		background-color:#ffffff;}
