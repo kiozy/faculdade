@@ -1,0 +1,39 @@
+﻿<html>
+	<head>
+		<title>IN Faculdade</title>
+		<meta charset="utf-8"/>
+		<link href="css/style.css" 	title="style" type="text/css" rel="stylesheet" media="all"/>
+	</head>
+	<body>
+		
+		
+		<form method="POST" action="php/buscar_aluno.php" enctype="multipart/form-data">
+			<fieldset>
+				<center>
+					<legend>Busca para Aluno</legend>
+				</center>	
+				
+				<br><br>
+				
+				<label for="nome">Buscar por: <label>
+				<select name="parametro">
+					<option selected name="disciplinasMatriculadas">Disciplinas Matriculadas</option>
+					<option name="avaliacao">Avaliação nas disciplinas</option>
+					<option name="notasEfaltas">Notas e faltas</option>
+					
+				</select>	
+				
+				<br><br>
+				
+				<label for="campo">Digite o nome da disciplina: </label>
+				<input type="text" name="busca" />
+				
+				<br><br>
+				
+				<button type="submit">Buscar</button>
+				
+			</fieldset>
+		</form>
+		
+	</body>
+</html>
