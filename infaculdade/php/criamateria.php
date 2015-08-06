@@ -10,7 +10,6 @@
 
 	mysqli_set_charset($link, 'utf8'); #avisa para o banco qual a encoding  que será usado
 	$sql = "insert into disciplina (nome_disc, ementa) values ('$nome', '$ementa')";
-	echo "$sql";
 	
 	$stmt = $link->prepare($sql); #Fatal error: Call to a member function execute() on a non-object in C:\wamp\www\infaculdade\php\criamateria.php on line 16
 	$ok = $stmt->execute(); #execute retorna um boolean

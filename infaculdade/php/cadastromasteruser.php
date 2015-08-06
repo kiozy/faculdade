@@ -57,7 +57,7 @@
 						$ok2 = $stmt->execute(); //executa insersão em endereço
 						
 						if($ok && $ok2)
-							echo 'Os dados foram inseridos com sucesso!';
+							echo 'Os dados foram inseridos com sucesso! <a href="cadastromasteruser.html">clique aqui para voltar</a>';
 						
 						/*if (crypt($_POST['senha'], $senha) == $senha) { 
 							echo "Senha correta!";
