@@ -1,0 +1,40 @@
+﻿<!--parada do login-->
+﻿<?php  session_start();
+
+	if(!(isset($_SESSION['login'])))
+		header('Location:index.html'); //redirecina página 
+	
+?>
+<!--end parada do login-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IN Junior</title>
+		<meta charset="utf-8"/>
+		<link 
+		href="css/style.css" 
+		title="style" 
+		type="text/css" 
+		rel="stylesheet"/>
+	</head>
+</head>
+<body>
+		<fieldset>
+			<center>
+				<legend>Bem vindo, professor <?php echo $_SESSION['login'] ; ?>!</legend>
+				<a href="php/logout.php">Sair</a>
+			</center>	
+			<br><br>
+				<form method="post" action="ponto.html">
+				<input name="go" type="submit" value="Cadastrar novo Ponto" />
+				</form>
+				
+				<form method="post" action="notafalta.html">
+				<input name="go" type="submit" value="Editar notas/faltas da Turma" />
+				</form>
+			
+		</fieldset>
+
+</body>
+</html>

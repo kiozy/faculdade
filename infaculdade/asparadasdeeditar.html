@@ -1,11 +1,18 @@
-﻿<!DOCTYPE html>
+﻿﻿<?php  session_start();
+	
+	if(!(isset($_SESSION['login'])))
+		header('Location:index.html'); //redirecina página 
+	
+?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>IN Faculdade</title>
 		<meta charset="utf-8"/>
 	</head>
 </head>
-<body>	
+<body>	<legend>Bem vindo, ó <?php echo $_SESSION['login'] ; ?>!</legend><br>
+	<a href="php/logout.php">Sair</a>
 	<form method="post" action="cadastromasteruser.html">
 	<input name="go" type="submit" value="Cadastrar novo Usuário" />
 	</form>

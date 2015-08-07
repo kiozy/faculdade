@@ -38,11 +38,11 @@
 					
 					if($query){
 						$cod_usuario = $query;
-						echo("$cod_usuario");
+						#echo("$cod_usuario");
 						
 						if ($tipo == "aluno") {  //Insere outros dados na tabela aluno
 							$sql = "insert into aluno (cod_usuario, cpf, matricula_aluno, nome_aluno) values ('$cod_usuario', '$cpf', '$matricula', '$nome')";
-							echo("Add em aluno...");
+							#echo("Add em aluno...");
 						}
 						else 
 							$sql = "insert into professor (cod_usuario, cpf, matricula_prof, nome_prof) values ('$cod_usuario', '$cpf', '$matricula', '$nome')";
@@ -50,10 +50,8 @@
 						$sql2 = "insert into endereco (cod_usuario, endereco, numero, bairro) values ('$query', '$endereco', '$numero', '$bairro')";
 						
 						$stmt = $link->prepare($sql);
-						echo "$sql<br><br>";
 						$ok = $stmt->execute(); //executa insersão em aluno || professor
 						$stmt = $link->prepare($sql2);
-						echo "$sql2<br><br>";
 						$ok2 = $stmt->execute(); //executa insersão em endereço
 						
 						if($ok && $ok2)
@@ -70,7 +68,7 @@
 				}
 				else{
 					echo "Não foi possível realizar a inserção dos dados de fora"
-					."<br><a href=\"cadastromasteruser.html\">clique aqui para tentar novamente</a>";
+					."<br><a href=\"../asparadasdeeditar.html\">clique aqui para tentar novamente</a>";
 				}	
 				mysqli_close($link); #fecha a conexão com o banco de dados
 			}

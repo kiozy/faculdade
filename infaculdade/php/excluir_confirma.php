@@ -27,12 +27,10 @@
 				$query->execute();
 				
 				$sql = "delete from usuario where cod_usuario='$excluir'";
-				echo $sql;
 				
 				$query = $link->prepare($sql);
 				
 				if($query->execute()){
-					echo "Entrei no outro delete";
 					$sql = "delete from aluno where cod_usuario='$excluir'";
 					
 					$query = $link->prepare($sql);

@@ -1,0 +1,50 @@
+﻿<!--parada do login-->
+﻿<?php  session_start();
+
+	if(!(isset($_SESSION['login'])))
+		header('Location:index.html'); //redirecina página 
+	
+?>
+<!--end parada do login-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IN Faculdade</title>
+		<meta charset="utf-8"/>
+		<link 
+		href="css/style.css" 
+		title="style" 
+		type="text/css" 
+		rel="stylesheet"/>
+	</head>
+</head>
+<body>	
+	<form method="POST" action="./php/adiciona_ponto.php" enctype="multipart/form-data">
+		<fieldset>
+			<center>
+				<legend>Adicionar Ponto</legend>
+			</center>	
+			<br><br>
+			
+			<label for="nome">Hora de Entrada</label>
+			<input type="time" name="entrada" />
+			
+			<br><br>
+			
+			<label for="nome">Hora de Saída</label>
+			<input type="time" name="saida" />
+			
+			<br><br>
+			
+			<button type="submit">Adicionar Ponto</button>
+			
+		</fieldset>
+	</form>
+
+</article>
+
+
+
+</body>
+</html>
