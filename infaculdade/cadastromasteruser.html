@@ -1,7 +1,16 @@
-﻿<!DOCTYPE html>
+﻿<!--parada do login-->
+﻿<?php  session_start();
+
+	if(!(isset($_SESSION['login'])))
+		header('Location:index.html'); //redirecina página 
+	
+?>
+<!--end parada do login-->
+
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>IN Junior</title>
+		<title>IN Faculdade</title>
 		<meta charset="utf-8"/>
 		<link 
 		href="css/style.css" 
@@ -11,7 +20,7 @@
 	</head>
 </head>
 <body>	
-	<form method="POST" action="./php/cadastromasteruser.php" enctype="multipart/form-data" onsubmit="return valida_numero();">
+	<form method="POST" action="./php/cadastromasteruser.php" enctype="multipart/form-data">
 		<fieldset>
 			<center>
 				<legend>Cadastro de usuários</legend>
@@ -37,7 +46,7 @@
 			<br><br>
 			
 			<label for="nome">Login *</label>
-			<input type="text" name="login" maxlength="20" />
+			<input type="text" name="login" maxlength="64" />
 			
 			<br><br>
 			
