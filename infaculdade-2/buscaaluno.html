@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>IN Faculdade</title>
+		<meta charset="utf-8"/>
+	</head>
+</head>
+<body>
+	<form method="POST" action="php/buscaaluno.php" enctype="multipart/form-data">
+			<fieldset>
+				<center>
+					<legend>Busca de Alunos</legend>
+				</center>	
+				
+				<br><br>
+				
+				<label for="nome">Buscar por(campo obrigatório): <label>
+				<select name="parametro">
+					<option selected>Todos os usuários</option>
+					<option>Nome</option>
+				</select>	
+				
+				<br><br>
+				
+				<label for="campo">Digite o parâmetro da busca: </label>
+				<input type="text" name="busca" />
+				
+				<br><br>
+				
+				<button type="submit">Buscar Alunos</button>
+				
+			</fieldset>
+		</form>
+	
+</body>
+</html>
