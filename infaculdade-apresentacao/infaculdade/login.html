@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IN JUNIOR FACULDADE</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+	<link href="css/estilo.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+			<a href="index.html"><img class="logo padpad" src="images/logo2.png"></a>
+				<h2>Faculdade IN</h2>
+				<li> 
+					<a href="./index.html">Página Inicial</a>
+				</li>
+                <li>
+                    <a href="#">Sobre</a>
+                </li>
+				<li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+			
+        </div>
+        <!-- /#sidebar-wrapper -->
+		
+
+		
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-centered">
+						<h1 class="nhac">IN JUNIOR FACULDADE</h1> 
+						
+						<fieldset>
+							<form id="formLogin" action="php/login.php" enctype="multipart/form-data" method="POST">
+							  <div class="form-group">
+								<label for="exampleInputEmail1">Login</label>
+								<input type="text" class="form-control" id="exampleInputEmail1" name="login" required>
+							  </div>
+							  <div class="form-group">
+								<label for="exampleInputPassword1">Senha</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" name="senha" required>
+							  </div>
+							  <div class="checkbox">
+								<label>
+								  <input type="checkbox">Manter conectado
+								</label>
+							  </div>
+							  <button type="submit" class="btn btn-default">Entrar</button>
+							</form>
+						</fieldset>
+					</div>
+		
+                    </div>
+                </div>
+            </div>
+			</div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
