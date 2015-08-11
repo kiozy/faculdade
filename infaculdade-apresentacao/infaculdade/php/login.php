@@ -38,7 +38,7 @@
 				header('Location:../inicial_aluno.php');
 			if ($senhoso['tipo'] == prof)
 				header('Location:../homeprof.php');
-			if ($senhoso['tipo'] == deus)
+			if ($senhoso['tipo'] == deus || $senhoso['tipo'] == coor)
 				header('Location:../asparadasdeeditar.php');
 			}
 		else
