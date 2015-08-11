@@ -77,8 +77,7 @@
 							//fetch_assoc : indice associativo
 							//fetch_row : indice numerico
 							
-							$codigo = $dados['codigo'];
-														
+																				
 							echo 'Disciplina: ' .$dados['nome_disc']  . '<br>';
 							
 							echo 'Ementa: ' . $dados['ementa'] . '<br>';

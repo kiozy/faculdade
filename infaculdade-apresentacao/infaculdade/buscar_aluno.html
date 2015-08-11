@@ -1,21 +1,54 @@
-﻿<html>
+﻿<!--parada do login-->
+﻿<?php  session_start();
+
+	if(!(isset($_SESSION['login'])))
+		header('Location:index.html'); //redirecina página 
+	
+?>
+<!--end parada do login-->
+<html>
 	<head>
 		<title>IN Faculdade</title>
 		<meta charset="utf-8"/>
 		<link href="css/style.css" 	title="style" type="text/css" rel="stylesheet" media="all"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+	<link href="css/estilo.css" rel="stylesheet">
 	</head>
 	<body>
-		
+		<div id="wrapper">
+        <!-- Sidebar -->
+        <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="margin-top:-20px">
+            <ul class="sidebar-nav">
+			<a href="index.html"><img class="logo padpad" src="images/logo2.png"></a>
+				<h2>Faculdade IN</h2>
+				<li> 
+					<a href="index.html">Página Inicial</a>
+				</li>
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
+				<li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+			
+        </div>
 		
 		<form method="POST" action="php/buscar_aluno.php" enctype="multipart/form-data">
 			<fieldset>
-				<center>
 					<legend>Busca para Aluno</legend>
-				</center>	
-				
+							
 				<br><br>
 				
-				<label for="nome">Buscar por: <label>
+				<label for="nome">Buscar por: </label>
 				<select name="parametro">
 					<option selected name="disciplinasMatriculadas">Disciplinas Matriculadas</option>
 					<option name="avaliacao">Avaliação nas disciplinas</option>
@@ -30,10 +63,10 @@
 				
 				<br><br>
 				
-				<button type="submit">Buscar</button>
+				<button type="submit" class="btn btn-default">Buscar</button>
 				
 			</fieldset>
 		</form>
-		
+			</div>
 	</body>
 </html>
