@@ -235,6 +235,8 @@
 				mysqli_free_result($query); //Libera a memória associada ao resultado
 		
 				mysqli_close($link); //fecha conexao com BD
+				
+				echo 'Clique <a href="../inicial_aluno.php">aqui</a> para voltar'
 						
 				}
 				

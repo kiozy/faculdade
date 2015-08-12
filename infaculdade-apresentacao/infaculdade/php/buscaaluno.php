@@ -60,7 +60,9 @@
 				
 							echo '<a href="editar.php?editar='.$dados['cod_aluno'].'">Editar</a> &nbsp;&nbsp;';
 							
-							echo '<a href="excluir.php?excluir='.$dados['cod_aluno'].'">Excluir</a>';
+							echo '<a href="excluir.php?excluir='.$dados['cod_aluno'].'">Excluir</a> &nbsp;&nbsp;';
+							
+							echo '<a href="notafalta.php?notafalta='.$dados['cod_aluno'].'">Editar notas e faltas</a>';
 							
 							echo '<br><br>';
 							
